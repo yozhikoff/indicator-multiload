@@ -24,7 +24,7 @@ public class Providers : Object {
         this.providers = {
             new CpuProvider(), new CpuFreqProvider(), new MemProvider(),
             new NetProvider(), new SwapProvider(), new LoadProvider(),
-            new DiskProvider()
+            new DiskProvider(), new GpuProvider()
         };
         this.update();
         this.functions = {

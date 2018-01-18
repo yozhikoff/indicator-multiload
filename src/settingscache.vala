@@ -18,7 +18,7 @@
 
 public class SettingsCache : Object {
     public static const string[] presetgraphids = {
-        "cpu", "mem", "net", "load", "swap", "disk"
+        "gpu", "cpu", "mem", "net", "load", "swap", "disk"
     };
     private HashTable<string, Settings> cached = new HashTable<string, Settings>
         .full(str_hash, str_equal, g_free, g_object_unref);

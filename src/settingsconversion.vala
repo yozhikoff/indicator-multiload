@@ -44,6 +44,9 @@ public class SettingsConversion : Object {
             if (!value.equal(defaultvalue)) {
                 switch (key) {
                 // alpha and background values are not converted
+		case "view-gpuload":
+                    this.settingscache.graphsettings("gpu").set_value("enabled", value);
+                    break;
                 case "view-cpuload":
                     this.settingscache.graphsettings("cpu").set_value("enabled", value);
                     break;

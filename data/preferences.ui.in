@@ -1022,6 +1022,24 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                     <property name="margin_left">12</property>
                     <property name="spacing">6</property>
                     <child>
+                      <object class="GtkCheckButton" id="gpu-enabled">
+                        <property name="label" translatable="no">_Gpu</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="xalign">0.5</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
                       <object class="GtkCheckButton" id="cpu-enabled">
                         <property name="label" translatable="yes">_Processor</property>
                         <property name="use_action_appearance">False</property>
@@ -1036,7 +1054,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                     <child>
@@ -1054,7 +1072,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                     <child>
@@ -1072,7 +1090,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">2</property>
+                        <property name="position">3</property>
                       </packing>
                     </child>
                     <child>
@@ -1090,7 +1108,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">3</property>
+                        <property name="position">4</property>
                       </packing>
                     </child>
                     <child>
@@ -1108,7 +1126,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">4</property>
+                        <property name="position">5</property>
                       </packing>
                     </child>
                     <child>
@@ -1126,7 +1144,7 @@ Davyd Madeley &lt;davyd@madeley.id.au&gt;</property>
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">5</property>
+                        <property name="position">6</property>
                       </packing>
                     </child>
                   </object>

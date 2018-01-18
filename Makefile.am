@@ -37,6 +37,7 @@ indicator_multiload_VALASOURCES = \
 	src/appindicatorview.vala \
 	src/colormapper.vala \
 	src/cpufreqprovider.vala \
+	src/gpuprovider.vala \
 	src/cpuprovider.vala \
 	src/diskprovider.vala \
 	src/expressionparser.vala \

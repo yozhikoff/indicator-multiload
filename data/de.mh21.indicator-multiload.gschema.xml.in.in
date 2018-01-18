@@ -5,6 +5,7 @@
     </schema>
 
     <schema id="de.mh21.indicator-multiload.graphs" path="/de/mh21/indicator-multiload/graphs/" gettext-domain="@GETTEXT_PACKAGE@">
+        <child name="gpu" schema="de.mh21.indicator-multiload.graphs.gpu" />
         <child name="cpu" schema="de.mh21.indicator-multiload.graphs.cpu" />
         <child name="mem" schema="de.mh21.indicator-multiload.graphs.mem" />
         <child name="net" schema="de.mh21.indicator-multiload.graphs.net" />
@@ -25,7 +26,7 @@
 
     <schema id="de.mh21.indicator-multiload.general" path="/de/mh21/indicator-multiload/general/" gettext-domain="@GETTEXT_PACKAGE@">
         <key name="graphs" type="as">
-            <default>[ "cpu", "mem", "net", "swap", "load", "disk" ]</default>
+            <default>[ "gpu", "cpu", "mem", "net", "swap", "load", "disk" ]</default>
             <_summary>Available graphs</_summary>
         </key>
 
@@ -257,6 +258,35 @@
         <child name="net1" schema="de.mh21.indicator-multiload.traces.net1" />
         <child name="net2" schema="de.mh21.indicator-multiload.traces.net2" />
         <child name="net3" schema="de.mh21.indicator-multiload.traces.net3" />
+    </schema>
+
+    <schema id="de.mh21.indicator-multiload.graphs.gpu" path="/de/mh21/indicator-multiload/graphs/gpu/" gettext-domain="@GETTEXT_PACKAGE@">
+        <key name="enabled" type="b">
+            <default>false</default>
+            <_summary>Graph visibility</_summary>
+        </key>
+
+        <key name="minimum" type="s">
+            <default>"0"</default>
+            <_summary>Minimum value for upper graph edge</_summary>
+        </key>
+
+        <key name="maximum" type="s">
+            <default>"100"</default>
+            <_summary>Maximum value for upper graph edge, zero means unlimited</_summary>
+        </key>
+
+        <key name="smooth" type="s">
+            <default>"1"</default>
+            <_summary>Number of values used for smooth graph scaling</_summary>
+        </key>
+
+        <key name="traces" type="as">
+            <default>[ "gpu1" ]</default>
+            <_summary>Available traces</_summary>
+        </key>
+
+        <child name="gpu1" schema="de.mh21.indicator-multiload.traces.gpu1" />
     </schema>
 
     <schema id="de.mh21.indicator-multiload.graphs.swap" path="/de/mh21/indicator-multiload/graphs/swap/" gettext-domain="@GETTEXT_PACKAGE@">
@@ -525,6 +555,23 @@
 
         <key name="expression" type="s">
             <default>"$(net.local)"</default>
+            <_summary>Trace expression</_summary>
+        </key>
+
+        <key name="enabled" type="b">
+            <default>true</default>
+            <_summary>Trace visibility</_summary>
+        </key>
+    </schema>
+
+    <schema id="de.mh21.indicator-multiload.traces.gpu1" path="/de/mh21/indicator-multiload/graphs/gpu/gpu1/" gettext-domain="@GETTEXT_PACKAGE@">
+        <key name="color" type="s">
+            <default>"ambiance:swap1"</default>
+            <_summary>Trace color</_summary>
+        </key>
+
+        <key name="expression" type="s">
+            <default>"$(gpu.util)"</default>
             <_summary>Trace expression</_summary>
         </key>
 
