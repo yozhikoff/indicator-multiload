@@ -1,3 +1,13 @@
+Basic NVIDIA GPU support modification of the original applet.
+Tested on Ubuntu 16.04
+
+to compile and install:
+sudo apt-get build-dep indicator-multiload
+./autogen.sh && make -j 8
+sudo make install
+
+
+Original README:
 Reimplementation of the gnome-applets multiload applet in vala and for Canonicals appindicators.
 
 Strings have been kept the same as in gnome-applets where possible to reduce translation work.
