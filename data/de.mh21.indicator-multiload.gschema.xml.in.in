@@ -76,7 +76,7 @@
         <key name="indicator-expressions" type="as">
             <!-- TRANSLATORS: This is a list of translatable strings. Do not translate anything inside of $(...), and make sure to keep any brackets, quotes, and commas. -->
             <_default l10n="messages">[
-                "",
+                "GPU: $(percent(gpu.util))",
                 "CPU $(percent(cpu.inuse))",
                 "Mem $(size(mem.user))",
                 "Net $(speed(net.down))/$(speed(net.up))",
@@ -95,6 +95,7 @@
         <key name="menu-expressions" type="as">
             <!-- TRANSLATORS: This is a list of translatable strings. Do not translate anything inside of $(...), and make sure to keep any brackets, quotes, and commas. -->
             <_default l10n="messages">[
+                "GPU: $(percent(gpu.util))",
                 "CPU: $(percent(cpu.inuse)), iowait $(percent(cpu.io))",
                 "Mem: $(size(mem.user)), cache $(size(mem.cached))",
                 "Net: down $(speed(net.down)), up $(speed(net.up))",
@@ -262,17 +263,17 @@
 
     <schema id="de.mh21.indicator-multiload.graphs.gpu" path="/de/mh21/indicator-multiload/graphs/gpu/" gettext-domain="@GETTEXT_PACKAGE@">
         <key name="enabled" type="b">
-            <default>false</default>
+            <default>true</default>
             <_summary>Graph visibility</_summary>
         </key>
 
         <key name="minimum" type="s">
-            <default>"0"</default>
+            <default>"1"</default>
             <_summary>Minimum value for upper graph edge</_summary>
         </key>
 
         <key name="maximum" type="s">
-            <default>"100"</default>
+            <default>"0"</default>
             <_summary>Maximum value for upper graph edge, zero means unlimited</_summary>
         </key>
 
