@@ -1,5 +1,5 @@
 Basic NVIDIA GPU support modification of the original applet.
-Tested on Ubuntu 16.04
+Tested on Ubuntu 18.04, updated to be compatable with Vala 0.36
 
 to compile and install:
 sudo apt-get build-dep indicator-multiload
